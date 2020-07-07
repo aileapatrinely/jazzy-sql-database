@@ -21,7 +21,7 @@
 
 ## Stretch
 
-- [ ] Order results by the name of the artist / song.
-- [ ] Add an extra column in the database (using Postico).
-- [ ] Update the HTML, JS, AJAX and server route to support the new database column.
+- [X ] Order results by the name of the artist / song.
+- [X ] Add an extra column in the database (using Postico).
+- [ X] Update the HTML, JS, AJAX and server route to support the new database column.
 - [ ] Move the duplicated `pg` connection code to a module.
