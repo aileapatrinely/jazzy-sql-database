@@ -74,7 +74,7 @@ function sendSongToServer() {
   // Send the data to the server
   $.ajax({
     method: 'POST',
-    url: '/song',
+    url: '/songs',
     data: songToSend,
   })
     .then(function (response) {
