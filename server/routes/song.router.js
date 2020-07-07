@@ -44,4 +44,18 @@ const songListArray = [
   },
 ];
 
+router.post('/', (req, res) => {
+  const queryText = `INSERT INTO "songs" ("title", "length", "date_released")
+        VALUES($1, $2, $3);`;
+  pool
+    .query(queryText, [req.body.title, req.body.length, req.body.date_released])
+    .then((dbResponse) => {
+      res.sendStatus(201);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.sendStatus(500);
+    });
+});
+
 module.exports = router;
