@@ -103,7 +103,10 @@ function getSongData() {
         $('#songTableBody').append(`<tr>
                                             <td>${song.title}</td>
                                             <td>${song.length}</td>
-                                            <td>${song.date_released}</td>
+                                            <td>${moment().format(
+                                              'MMM Do YY',
+                                              song.date_released
+                                            )}</td>
                                             <td>${song.extra_column}</td>
                                           </tr>`);
       }
